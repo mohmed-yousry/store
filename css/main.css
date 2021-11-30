@@ -1,0 +1,484 @@
+:root {
+  --main-color: hsl(26deg 100% 55%);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+.over {
+  position: fixed;
+  left: -300px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: white;
+  padding: 15px;
+  z-index: 1;
+  transition-duration: 0.4s;
+}
+
+.over .close {
+  cursor: pointer;
+}
+
+.over li:first-of-type {
+  margin-top: 1.5rem;
+}
+.over li {
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.over li::after {
+  bottom: 15px;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  transition-duration: 0.3s;
+}
+
+.over li:hover:after {
+  width: 100%;
+}
+
+.over.active {
+  left: 0;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+.cart {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+header nav .link {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav .link ul {
+  display: flex;
+}
+header nav .link ul li {
+  margin-left: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+header nav .link ul li::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  transition-duration: 0.3s;
+}
+
+header nav .link ul li:hover::after {
+  width: 100%;
+}
+header nav .parson {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header nav .parson img:last-of-type {
+  width: 50px;
+  margin-left: 2rem;
+  border: var(--main-color) 3px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  height: 50px;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: flex;
+    width: 30px;
+    height: 30px;
+  }
+
+  header nav .link ul {
+    display: none;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: end;
+  }
+}
+
+/* End header  */
+
+/* start prodect` */
+
+.prodect {
+  margin-top: 100px;
+}
+
+.prodect .container .pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prodect .container .pro .left {
+  width: 40%;
+}
+.prodect .container .pro .left .top {
+  height: 90%;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.prodect .container .pro .left .top .next,
+.prodect .container .pro .left .top .prov {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.prodect .container .pro .left .top .next,
+.prodect .container .pro .left .top .prov {
+  display: none;
+}
+
+.prodect .container .pro .left .top .next {
+  right: 2rem;
+}
+.prodect .container .pro .left .top .prov {
+  left: 2rem;
+}
+.prodect .container .pro .left .top img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.prodect .container .pro .left .botoom {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.prodect .container .pro .left .botoom .part {
+  width: calc((100% / 4) - 10px);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+}
+.prodect .container .pro .left .botoom .part.active {
+  border: var(--main-color) 4px solid;
+  opacity: 0.8;
+}
+
+.prodect .container .pro .left .botoom img {
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.prodect .container .pro .right {
+  width: 40%;
+}
+.prodect .container .pro .right h5 {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  margin: 0;
+}
+.prodect .container .pro .right h1 {
+  font-size: 2.2rem;
+}
+.prodect .container .pro .right > p {
+  color: #888;
+}
+.prodect .container .pro .right .price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.prodect .container .pro .right .price span:first-of-type {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.prodect .container .pro .right .price span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.prodect .container .pro .right .price span:nth-of-type(3) {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.prodect .container .pro .right .price span:last-of-type {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 4rem;
+  text-align: end;
+  color: #888;
+}
+.prodect .container .pro .right .totel-price {
+  margin: 0;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+.prodect .container .pro .right .buy {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.prodect .container .pro .right .buy i {
+  cursor: pointer;
+  width: inherit;
+  height: inherit;
+  color: var(--main-color);
+}
+.prodect .container .pro .right .buy input {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 20%;
+}
+.prodect .container .pro .right .buy button {
+  padding: 1rem 4rem;
+  border: var(--main-color);
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: white;
+  margin-left: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.prodect .container .pro .right .buy button:focus {
+  background-color: hsl(26deg 99% 50% / 37%);
+}
+
+.prodect .container .pro .right .buy button svg {
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .prodect .container .pro {
+    flex-direction: column;
+  }
+
+  .prodect .container .pro .left,
+  .prodect .container .pro .right {
+    width: 100%;
+  }
+
+  .prodect .container .pro .left .botoom {
+    display: none;
+  }
+
+  .prodect .container .pro .right .buy button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .prodect .container .pro .right .buy input {
+    width: 90%;
+  }
+
+  .prodect .container .pro .right .totel-price {
+    width: inherit;
+  }
+
+  .prodect .container .pro .right .price {
+    justify-content: space-between;
+  }
+
+  .prodect .container .pro .left .top .next,
+  .prodect .container .pro .left .top .prov {
+    display: flex;
+  }
+}
+
+/* تحسينات */
+
+/* .logo img {
+  width: inherit;
+  height: inherit;
+} */
+
+.card-body {
+  position: absolute;
+  right: 0;
+  width: 278px;
+  border: white 2px solid;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 0px 1px #dadada;
+  top: 67px;
+  display: none;
+}
+
+.card-body.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .child {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  order: -1;
+}
+
+.card-body .child img {
+  height: 100%;
+  width: 20%;
+  margin-right: 1.5rem;
+}
+
+.card-body .sel {
+  width: 80%;
+  text-align: end;
+  position: absolute;
+  bottom: 0px;
+  left: -32px;
+}
+.card-body .child h5 {
+  color: #888;
+}
+
+.card-body .child div {
+  width: 100%;
+}
+
+.card-body div span {
+  color: #888;
+}
+.card-body div span:nth-of-type(2) {
+  margin-right: 0 1rem;
+}
+.card-body div span:nth-of-type(3) {
+  margin: 0 0.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.dele {
+  position: absolute;
+  top: 40%;
+  right: 2rem;
+  border: red 1px solid;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .card-body {
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  .card-body .sel {
+    left: -50px;
+    bottom: 10px;
+  }
+
+  .card-body .child h5 {
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .prodect .container .pro .left .top {
+    top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .prodect .container .pro .right .buy input {
+    width: 85%;
+  }
+}
